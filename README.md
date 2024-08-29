@@ -30,9 +30,9 @@ This pipeline can be adapted and extended for various big data projects, where s
 2. **Data Ingestion**: Data was read from Azure Blob Storage into a Spark DataFrame. This step involved connecting to Azure Blob Storage using the `BlobServiceClient` and reading the data directly into PySpark.
 
 3. **Data Processing and Cleaning**:
-   - Unnecessary columns (`Current Ver`, `Android Ver`, `Size`, `Content Rating`, `Last Updated`) were dropped to streamline the dataset.
+   - Unnecessary columns were dropped to streamline the dataset.
    - The schema of the data was modified to fit the requirements of Azure SQL Database.
-   - A specific transformation was applied where ratings with a value of `0.0` were adjusted to `0` to ensure data consistency.
+   - A specific transformation was applied to ensure data consistency.
 
 4. **SQL Integration**: The cleaned and transformed data was written into an Azure SQL Database using PySpark's write operation, enabling efficient storage and future querying.
 
